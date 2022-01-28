@@ -183,6 +183,17 @@ class AddressBook {
       )
     );
     ContactsArray.forEach((contact_book) => console.log(contact_book.toString()));
+  
+    //finding contact using name
+    let check = ContactsArray.findIndex(
+      (contact_book) => contact_book.firstName == "Richa"
+    );
+    //updating the contact detail
+    ContactsArray[check].phoneNumber = 7083280401;
+  
+    //displaying contacts after being updated
+    console.log("--------After Updating pnoneNumber--------------");
+    ContactsArray.forEach((contact_book) => console.log(contact_book.toString()));
   } catch (e) {
     console.log(e);
   }
